@@ -11,22 +11,25 @@ function App() {
 
  
 useEffect(
-  fetch('https://gist.githubusercontent.com/natebass/b0a548425a73bdf8ea5c618149fe1fce/raw/f4231cd5961f026264bb6bb3a6c41671b044f1f4/quotes.json')
-  .then(data=> data.json())
-  .then(data=> console.log(data))
-  .then(quotes=> getQuotesData(quotes))
-,[])
+  console.log("Hi")
+  //  fetch('https://gist.githubusercontent.com/natebass/b0a548425a73bdf8ea5c618149fe1fce/raw/f4231cd5961f026264bb6bb3a6c41671b044f1f4/quotes.json')
+  //   // .then(data=> data.json())
+  //   .then(quotes=> getQuotesData(quotes))
+  //   .catch("Error")
+ ,[])
 
 
   function nextQuoteClickHandler() 
-  {
-    console.log('Hi');
-  }
-  console.log(quotesData)
+    {
+      console.log(quotesData);
+    }
+
   return (
     <div className="App" id="quote-box">
-      {/* <Button buttonDisplayName="Next Quote" clickHandler={nextQuoteClickHandler}/> */}
-      <p>${quotesData}</p>
+      <Button buttonDisplayName="Next Quote" clickHandler={nextQuoteClickHandler}/>
+      <Button buttonDisplayName="Next Quote" clickHandler={nextQuoteClickHandler}/>
+      <Button buttonDisplayName="Next Quote" clickHandler={nextQuoteClickHandler}/>
+      <p>dhaiudhiusadhuasihduiashd</p>
     </div>
   );
 }
